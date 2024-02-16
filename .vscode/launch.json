@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/Users/gunceakkoyun_macmini/Documents/Belgeler - Gunce MacMini/Github/PostMan-FOTA/.pio/build/B100BB/firmware.elf",
+            "executable": "/Users/recepsenbas/Documents/GitHub/PostMan-FOTA/.pio/build/B100BB/firmware.elf",
             "projectEnvName": "B100BB",
-            "toolchainBinDir": "/Users/gunceakkoyun_macmini/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "/Users/recepsenbas/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
@@ -25,18 +25,18 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/Users/gunceakkoyun_macmini/Documents/Belgeler - Gunce MacMini/Github/PostMan-FOTA/.pio/build/B100BB/firmware.elf",
+            "executable": "/Users/recepsenbas/Documents/GitHub/PostMan-FOTA/.pio/build/B100BB/firmware.elf",
             "projectEnvName": "B100BB",
-            "toolchainBinDir": "/Users/gunceakkoyun_macmini/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "/Users/recepsenbas/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
-            "executable": "/Users/gunceakkoyun_macmini/Documents/Belgeler - Gunce MacMini/Github/PostMan-FOTA/.pio/build/B100BB/firmware.elf",
+            "executable": "/Users/recepsenbas/Documents/GitHub/PostMan-FOTA/.pio/build/B100BB/firmware.elf",
             "projectEnvName": "B100BB",
-            "toolchainBinDir": "/Users/gunceakkoyun_macmini/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "/Users/recepsenbas/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "loadMode": "manual"
         }

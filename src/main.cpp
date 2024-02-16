@@ -958,17 +958,19 @@ void setup() {
 	// Boot Delay
 	delay(500);
 
-	pinMode(errorLED, OUTPUT);
-	pinMode(readyLED, OUTPUT);
-	pinMode(workingLED, OUTPUT);
+	pinMode(errorLED, OUTPUT);//Kırmızı
+	pinMode(readyLED, OUTPUT);//Yeşil
+	pinMode(workingLED, OUTPUT);//Mavi
 
 	// initialize the SD card at SPI_HALF_SPEED to avoid bus errors with
 	// breadboards.  use SPI_FULL_SPEED for better performance.
-	while (!sd.begin(10)) {
+	if (!sd.begin(10)) {
 		ShowMessage(MSG_NO_SD_CARD);
-		delay(1000);
+		PORTB |= 0b00000010;
+		delay(200);
+		PORTB &= 0b11111101;
 	}
-
+	
 	
 
 } // end of setup
@@ -1034,7 +1036,10 @@ bool writeFlashContents()
 	if (errors == 0)
 		updateFuses(true);
 
-	return errors == 0;
+	if(errors == 0){
+		sd.remove("fw.hex");
+		return true;
+	}
 } // end of writeFlashContents
 
 //------------------------------------------------------------------------------
@@ -1067,11 +1072,9 @@ void loop() {
 	stopProgramming();
 	delay(500);
 
-	if (ok) ShowMessage(MSG_FLASHED_OK);
-
-
-
-
+	if (ok)	{
+		ShowMessage(MSG_FLASHED_OK);
+	}
 
 	// Done Signal [HIGH]
 	PORTB |= 0b00000010;
